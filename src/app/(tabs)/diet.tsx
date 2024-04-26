@@ -1,13 +1,24 @@
 import { Container, TabContent } from "@/components";
-import { Link, Stack } from "expo-router";
+import { Button } from "@/shared/ui";
+import { Link, Stack, router } from "expo-router";
 
 export default function DietScreen() {
   return (
     <Container>
       <Stack.Screen options={{ title: "Диета:" }} />
       <TabContent
-        left={<Link href={"/diet/about"}>Понятие о диете</Link>}
-        right={<Link href={"/diet/res"}>Лекции специалистов</Link>}
+        left={
+          <Button
+            text="Понятие о диете"
+            onPress={() => router.push("/diet/about")}
+          />
+        }
+        right={
+          <Button
+            text="Лекции специалистов"
+            onPress={() => router.push("/diet/res")}
+          />
+        }
       />
     </Container>
   );

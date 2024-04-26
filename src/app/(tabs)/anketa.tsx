@@ -1,4 +1,4 @@
-import { Container, Title } from "@/components";
+import { Container, ListItem, Title } from "@/components";
 import HealthDataTable from "@/components/HealthTable";
 import { Stack } from "expo-router";
 import { View, Text, Linking, TouchableOpacity } from "react-native";
@@ -31,13 +31,10 @@ const AnketaScreen = () => {
       <View style={{ gap: 10 }}>
         {onlineTools.map((v, idx) => (
           <TouchableOpacity key={idx} onPress={() => handleOpenYoutube(v.url)}>
-            <Text>
-              {idx + 1}.{v.desc}
-            </Text>
+            <ListItem content={`${v.desc}`} />
           </TouchableOpacity>
         ))}
       </View>
-      <HealthDataTable />
     </Container>
   );
 };

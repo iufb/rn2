@@ -45,7 +45,9 @@ const makeStyles = (fontScale: number) =>
     container: {
       padding: 10,
       alignItems: "center",
+      justifyContent: "center",
       borderRadius: 10,
+      minHeight: 100,
     },
     text: {
       fontSize: 16 / fontScale,

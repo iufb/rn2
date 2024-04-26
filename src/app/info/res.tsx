@@ -1,6 +1,7 @@
 import { Container } from "@/components";
 import { Stack } from "expo-router";
 import { Linking, Text, TouchableOpacity, View } from "react-native";
+import { Divider } from "react-native-paper";
 const videos = [
   {
     url: "https://www.youtube.com/watch?v=ilKEEe7AsmU",
@@ -45,6 +46,7 @@ const ResScreen = () => {
             <Text>
               {idx + 1}.{v.desc}
             </Text>
+            <Divider style={{ marginBottom: 5 }} />
           </TouchableOpacity>
         ))}
       </View>

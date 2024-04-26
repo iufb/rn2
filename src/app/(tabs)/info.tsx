@@ -1,12 +1,23 @@
 import { Container, TabContent } from "@/components";
-import { Link, Stack } from "expo-router";
+import { Button } from "@/shared/ui";
+import { Link, Stack, router } from "expo-router";
 const InfoScreen = () => {
   return (
     <Container>
       <Stack.Screen options={{ title: "Инфо:" }} />
       <TabContent
-        left={<Link href={"/info/about"}>Понятие о панкреатите</Link>}
-        right={<Link href={"/info/res"}>Лекции специалистов</Link>}
+        left={
+          <Button
+            text="Понятие о панкреатите"
+            onPress={() => router.push("/info/about")}
+          />
+        }
+        right={
+          <Button
+            text="Лекции специалистов"
+            onPress={() => router.push("/info/res")}
+          />
+        }
       />
     </Container>
   );

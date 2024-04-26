@@ -1,6 +1,7 @@
 import { Container } from "@/components";
 import { Stack } from "expo-router";
 import { Linking, Text, TouchableOpacity, View } from "react-native";
+import { Divider } from "react-native-paper";
 
 const youtubeLinks = [
   {
@@ -39,7 +40,7 @@ const ResScreen = () => {
   };
   return (
     <Container>
-      <Stack.Screen options={{ title: "Инфо:" }} />
+      <Stack.Screen options={{ title: "Диета:" }} />
       <Text style={{ fontSize: 24 }}>Лекции:</Text>
       <View style={{ gap: 10 }}>
         {youtubeLinks.map((v, idx) => (
@@ -47,6 +48,7 @@ const ResScreen = () => {
             <Text>
               {idx + 1}.{v.desc}
             </Text>
+            <Divider style={{ marginBottom: 5 }} />
           </TouchableOpacity>
         ))}
       </View>

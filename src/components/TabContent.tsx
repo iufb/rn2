@@ -22,7 +22,6 @@ export const TabContent = ({
       ]}
     >
       <View style={{ flex: 1, alignSelf: "center" }}>{left}</View>
-      <View style={{ height: "100%", width: 1, backgroundColor: "black" }} />
       <View
         style={{
           flex: 1,
